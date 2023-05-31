@@ -1,0 +1,28 @@
+from random import randint
+raffle = dict()
+print('Valores sorteados: ')
+for i in range(1, 5):
+    raffle['jogador1'] = randint(1, 6)
+    raffle['jogador2'] = randint(1, 6)
+    raffle['jogador3'] = randint(1, 6)
+    raffle['jogador4'] = randint(1, 6)
+for i, j in enumerate(raffle):
+    print(f'{j} tirou {raffle[j]} no dado')
+print('-='*30)
+print('==RANKING DOS JOGADORES==')
+decreasing = sorted(raffle.values(), reverse=True)
+print(decreasing)
+for k, z in enumerate(decreasing):
+    print(f'{k+1}° lugar: {z}')
+
+
+
+
+
+
+
+
+
+
+
+
